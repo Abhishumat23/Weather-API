@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+body{
+  background-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    background: #ffffff;
+    color: #000000;
+    padding: 2rem;
+    width: 75%;
+    margin: 2.5rem auto;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #d8d8d8;
+    transition: box-shadow 0.2s;
+}
+
+.container:hover{
+  box-shadow: 2px 2px 4px 4px rgb(174, 173, 173);
+
+}
+
+.weather__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    border: none;
+    background: #e9e9e9;
+    outline: none;
+    color: #000000;
+    padding: 1rem 5rem;
+    border-radius: 30px;
+}
+
+input::placeholder {
+    color: #000000;
+}
+
+.weather__search {
+    position: relative;
+}
+
+.weather__search i {
+    position: absolute;
+    left: 20px;
+    top: 17px;
+    font-size: 15px;
+    color: #000000;
+}
+
+.weather__units {
+    font-size: 1.5rem;
+}
+
+.weather__units span {
+    cursor: pointer;
+}
+
+.weather__units span:first-child {
+    margin-right: 0.5rem;
+}
+
+.weather__body {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.weather__datetime {
+    margin-bottom: 2rem;
+    font-size: 14px;
+}
+
+.weather__forecast {
+    background: #ffffff;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: #c7c7c7;
+}
+
+.weather__icon img {
+    width: 100px;
+}
+
+.weather__temperature {
+    font-size: 1.75rem;
+}
+
+.weather__minmax {
+    display: flex;
+    justify-content: center;
+}
+
+.weather__minmax p {
+    font-size: 14px;
+    margin: 0.5rem;
+}
+
+.weather__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin-top: 4rem;
+}
+
+.weather__card {
+    display: flex;
+    align-items: center;
+    background: #e9e9e9;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.weather__card i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.weather__card p {
+    font-size: 14px;
+}
+
+@media(max-width: 936px){
+    .container {
+        width: 90%;
+    }
+
+    .weather__header {
+        flex-direction: column;
+    }
+
+    .weather__units {
+        margin-top: 1rem;
+    }
+
+    .logo-switches{
+      margin: auto;
+    }
+}
+
+
+@media(max-width: 400px){
+    .weather__info {
+        grid-template-columns: none;
+    }
+
+    .logo-switches{
+      margin: auto;
+    }
+}
+
+.dark-mode{
+  #mode-toggle{
+    background-color: #333333;
+  }
+
+  #moon{
+    color: white;
+  }
+}
+
+.logo-switches{
+  margin-right: auto;
+}
+
+body.dark-mode {
+  background-color: #242424;
+  color: #ffffff;
+}
+
+.dark-mode input {
+  background: #868686;
+  color: #ffffff;
+}
+
+.dark-mode ::placeholder {
+  color: #ffffff;
+}
+
+.dark-mode .weather__forecast {
+  background: #868686;
+  border-color: #797979;
+}
+
+.dark-mode .weather__card {
+  background: #6f6e6e;
+}
+
+.dark-mode .weather__header i {
+  color: #ffffff;
+}
+
+.dark-mode .weather__units span {
+  color: #ffffff;
+}
+
+.dark-mode .weather__units span:first-child {
+  margin-right: 0.5rem;
+}
+
+.dark-mode .weather__icon img {
+  filter: brightness(0) invert(1);
+}
+
+.dark-mode .container {
+  background-color: #333333;
+  color: #ffffff;
+  border-color: #8c8989;
+}
+
+.dark-mode .container:hover {
+  box-shadow: 2px 2px 4px 4px rgb(136, 136, 136);
+}
+
+#theme-toggle svg {
+  height: 18px
+}
+
+button#theme-toggle {
+  font-size: 26px;
+  margin: auto 4px
+}
+
+body.dark-mode #sun {
+  vertical-align: middle;
+  display: none
+}
+
+body:not(.dark-mode) #moon {
+  display: none
+}
+
+
+:root {
+  --icon-color-light: #000000; /* Color for light mode */
+  --icon-color-dark: #FFFFFF; /* Color for dark mode */
+}
+
+#mode-toggle:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#mode-toggle:active{
+  opacity: 0.6;
+}
+
+#mode-toggle{
+  background-color: white;
+  border-style: hidden;
+  border-radius: 500px;
+  height: 53px;
+  width: 55px;
+  font-weight: bold;
+}
